@@ -3,14 +3,14 @@ import 'tailwindcss/tailwind.css';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import Layout from '../components/Layout/Layout';
+import { ThemeProvider, Grid } from '@material-ui/core';
 import theme from '../lib/theme';
 
 const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
   return (
     <>
       <Head>
-        <title>Titulo Custom</title>
+        <title>Next Material UI</title>
         <meta name="theme-color" content={theme.palette.primary.main} />
         <meta
           name="viewport"
@@ -21,10 +21,10 @@ const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
           href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
         />
       </Head>
-      <Layout>
+      <ThemeProvider theme={theme}>
         <CssBaseline />
         <Component {...pageProps} />
-      </Layout>
+      </ThemeProvider>
     </>
   );
 };
