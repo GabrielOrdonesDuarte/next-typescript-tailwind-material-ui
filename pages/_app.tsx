@@ -3,7 +3,7 @@ import 'tailwindcss/tailwind.css';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import { ThemeProvider, Grid } from '@material-ui/core';
+import { ThemeProvider } from '@material-ui/core';
 import theme from '../lib/theme';
 
 const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {

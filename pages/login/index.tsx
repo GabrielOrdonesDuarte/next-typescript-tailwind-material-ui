@@ -1,5 +1,4 @@
 import { Grid, makeStyles, Paper, Theme } from '@material-ui/core';
-import theme from '../../lib/theme';
 
 const useStyles = makeStyles((theme: Theme) => ({
   paper: {
