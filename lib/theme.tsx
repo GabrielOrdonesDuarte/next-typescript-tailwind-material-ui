@@ -1,13 +1,22 @@
 import { createMuiTheme } from '@material-ui/core/styles';
-import {} from './interfaces';
+import {} from './util/interfaces';
 
 const theme = createMuiTheme({
-  // resolucao do bug de overflow no componente 'Grid'
   overrides: {
+    // resolucao do bug de overflow no componente 'Grid'
     MuiGrid: {
       container: {
         width: '100% !important',
         margin: '0 !important',
+      },
+    },
+    //
+    MuiTypography: {
+      h1: {
+        color: 'pink',
+      },
+      h2: {
+        color: 'purple',
       },
     },
   },
@@ -21,8 +30,14 @@ const theme = createMuiTheme({
     },
   },
   palette: {
-    corPrimaria: '#5c6ac4',
-    corSecundaria: '#19f719',
+    custom: {
+      corLaranja: '#FFA500',
+      corMarrom: '#DEB887',
+    },
+    text: {
+      primary: '#5c6ac4',
+      secondary: '#19f719',
+    },
   },
   typography: {
     fontSize: 13,

@@ -1,17 +1,19 @@
-import { Grid, makeStyles, Theme } from '@material-ui/core';
+import { Grid, makeStyles } from '@material-ui/core';
 
-const Container: any = ({ children }) => {
+const marginContainer = 5;
+
+const Container: any = (props: any) => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <Grid container spacing={5}>
-        {children}
+      <Grid container spacing={marginContainer} {...props}>
+        {props.children}
       </Grid>
     </div>
   );
 };
 
-const useStyles = makeStyles((theme: Theme) => ({
+const useStyles = makeStyles(() => ({
   root: {
     flexGrow: 1,
   },
