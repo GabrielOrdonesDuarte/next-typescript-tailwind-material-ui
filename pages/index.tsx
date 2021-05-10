@@ -1,11 +1,12 @@
 import { Grid, makeStyles, Paper, Theme } from '@material-ui/core';
+import Container from '../components/Container/Container';
 
 const Login: any = () => {
   const classes = useStyles();
   return (
     <>
-      <Grid container spacing={5}>
-        <Grid item sm={12} lg={4}>
+      <Container>
+        <Grid item sm={12} lg={5}>
           <Paper className={classes.card1}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
             dicta iusto molestiae quas rem officia est unde dignissimos
@@ -13,7 +14,7 @@ const Login: any = () => {
             incidunt fuga.
           </Paper>
         </Grid>
-        <Grid item sm={12} lg={4}>
+        <Grid item sm={12} lg={5}>
           <Paper className={classes.card2}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
             dicta iusto molestiae quas rem officia est unde dignissimos
@@ -21,11 +22,11 @@ const Login: any = () => {
             incidunt fuga.
           </Paper>
         </Grid>
-        <Grid item sm={12} lg={4}>
+        <Grid item sm={12} lg={2}>
           <h1 className={classes.tamanhoFonte}>Lorem ipsum dolor sit amet</h1>
           <span className="bg-blue-900 text-red-500">Tailwind Example</span>
         </Grid>
-      </Grid>
+      </Container>
     </>
   );
 };
